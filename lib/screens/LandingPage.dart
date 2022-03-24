@@ -48,6 +48,12 @@ class LandingPage extends StatelessWidget {
             ),
             // Text San franciso with - themeData.textTheme.headline1
             // divider - grey color
+            Padding(
+              padding: sidePadding,
+              child: Divider(
+                color: Colors.grey,
+              ),
+            ),
             addVerticalSpace(10),
             // ChoiceOption -> Row -> SingleChildScrollView (axis horizontal)
 
