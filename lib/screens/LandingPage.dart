@@ -55,6 +55,20 @@ class LandingPage extends StatelessWidget {
               ),
             ),
             addVerticalSpace(10),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ChoiceOption(text: "\$12,000"),
+                    ChoiceOption(text: "houses"),
+                    ChoiceOption(text: "flats"),
+                    ChoiceOption(text: "penthouse"),
+                  ],
+                ),
+              ),
+            ),
             // ChoiceOption -> Row -> SingleChildScrollView (axis horizontal)
 
             addVerticalSpace(10),
