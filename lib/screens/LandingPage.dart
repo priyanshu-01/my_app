@@ -72,6 +72,9 @@ class LandingPage extends StatelessWidget {
             // ChoiceOption -> Row -> SingleChildScrollView (axis horizontal)
 
             addVerticalSpace(10),
+            RealEstateItem(
+              itemData: RE_DATA[0],
+            ),
             // ListView.builder (itemCount : RE_DATA.length, itemBuilder : RealEstateItem(itemData: RE_DATA[index]),   -> Padding -> Expanded                   ) )
           ],
         ),
@@ -99,7 +102,9 @@ class RealEstateItem extends StatelessWidget {
           children: [
             Stack(
               children: [
-                FlutterLogo(),
+                // FlutterLogo(),
+                Image.asset(itemData['image']),
+
                 // use Image.asset()- itemData["image"] as image path, ClipRRect - radius 25
                 // favorite_border icon, inside positioned widget
               ],
