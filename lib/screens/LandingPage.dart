@@ -21,7 +21,13 @@ class LandingPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             addVerticalSpace(padding),
-
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                BorderIcon(child: Icon(Icons.menu)),
+                BorderIcon(child: Icon(Icons.settings)),
+              ],
+            ),
             // [menu icon, settings icon]-> row(spacebetween)
             addVerticalSpace(20),
             // City text
