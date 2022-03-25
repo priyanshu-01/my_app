@@ -21,70 +21,22 @@ class LandingPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             addVerticalSpace(padding),
-            Padding(
-              padding: sidePadding,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  BorderIcon(child: Icon(Icons.menu)),
-                  BorderIcon(child: Icon(Icons.settings)),
-                ],
-              ),
-            ),
+
             // [menu icon, settings icon]-> row(spacebetween)
             addVerticalSpace(20),
             // City text
-            Padding(
-              padding: sidePadding,
-              child: Text('City'),
-            ),
+
             addVerticalSpace(10),
-            Padding(
-              padding: sidePadding,
-              child: Text(
-                'San Francisco',
-                style: themeData.textTheme.headline1,
-              ),
-            ),
+
             // Text San franciso with - themeData.textTheme.headline1
             // divider - grey color
-            Padding(
-              padding: sidePadding,
-              child: Divider(
-                color: Colors.grey,
-              ),
-            ),
+
             addVerticalSpace(10),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    ChoiceOption(text: "\$12,000"),
-                    ChoiceOption(text: "houses"),
-                    ChoiceOption(text: "flats"),
-                    ChoiceOption(text: "penthouse"),
-                  ],
-                ),
-              ),
-            ),
+
             // ChoiceOption -> Row -> SingleChildScrollView (axis horizontal)
 
             addVerticalSpace(10),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ListView.builder(
-                  itemCount: RE_DATA.length,
-                  itemBuilder: (context, index) {
-                    return RealEstateItem(
-                      itemData: RE_DATA[index],
-                    );
-                  },
-                ),
-              ),
-            )
+
             // ListView.builder (itemCount : RE_DATA.length, itemBuilder : RealEstateItem(itemData: RE_DATA[index]),   -> Padding -> Expanded                   ) )
           ],
         ),
@@ -112,16 +64,7 @@ class RealEstateItem extends StatelessWidget {
           children: [
             Stack(
               children: [
-                // FlutterLogo(),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(25),
-                  child: Image.asset(itemData['image']),
-                ),
-                Positioned(
-                    top: 15.0,
-                    right: 15.0,
-                    child: BorderIcon(child: Icon(Icons.favorite_border))),
-
+                FlutterLogo(),
                 // use Image.asset()- itemData["image"] as image path, ClipRRect - radius 25
                 // favorite_border icon, inside positioned widget
               ],
