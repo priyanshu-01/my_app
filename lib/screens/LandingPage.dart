@@ -39,6 +39,20 @@ class LandingPage extends StatelessWidget {
               child: Text('City'),
             ),
             addVerticalSpace(10),
+            Padding(
+              padding: sidePadding,
+              child: Text(
+                'San francisco',
+                style: themeData.textTheme.headline1,
+              ),
+            ),
+
+            Padding(
+              padding: sidePadding,
+              child: Divider(
+                color: Colors.grey,
+              ),
+            ),
 
             // Text San franciso with - themeData.textTheme.headline1
             // divider - grey color
