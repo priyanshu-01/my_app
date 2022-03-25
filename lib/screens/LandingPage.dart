@@ -34,7 +34,10 @@ class LandingPage extends StatelessWidget {
             // [menu icon, settings icon]-> row(spacebetween)
             addVerticalSpace(20),
             // City text
-
+            Padding(
+              padding: sidePadding,
+              child: Text('City'),
+            ),
             addVerticalSpace(10),
 
             // Text San franciso with - themeData.textTheme.headline1
